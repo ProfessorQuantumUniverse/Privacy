@@ -22,8 +22,16 @@
             <p><strong>Account holder / responsible entity as shown on Google Play:</strong> Theresa de Wet Bay Mueller, Germany</p>
             <p><strong>Developer and author of the app:</strong> Lorenzo Bay-M&uuml;ller (GitHub: <a href="https://github.com/ProfessorQuantumUniverse">@ProfessorQuantumUniverse</a>)</p>
             <p><strong>Contact e-mail:</strong> <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a></p>
+            <p><strong>Source code:</strong> <a href="https://github.com/ProfessorQuantumUniverse/Phantasialand-Waitingtimes-App">github.com/ProfessorQuantumUniverse/Phantasialand-Waitingtimes-App</a> (GNU GPL v3)</p>
             <p><strong>This document is the privacy policy referenced in the Google Play Store listing of this app.</strong></p>
         </div>
+
+        <ul class="pledge">
+            <li><strong>100&nbsp;% open source</strong>Every line of code is public under the GPL v3.</li>
+            <li><strong>Zero trackers</strong>No analytics, no crash reporting, no telemetry, no tracking SDKs.</li>
+            <li><strong>Zero ads</strong>No advertising and no ad IDs &ndash; ever.</li>
+            <li><strong>Anonymous requests</strong>Only public park data is fetched &ndash; nothing about you is sent.</li>
+        </ul>
 
         <h2>1. What this app does</h2>
         <p>Phantaland Queue Times is an unofficial, open source app that shows the current wait times for the attractions of the Phantasialand theme park.</p>
@@ -56,7 +64,7 @@
         </p>
 
         <h2>3. Data that stays on your device</h2>
-        <p>Your app settings (for example filters and sort order) and, where applicable, a short-lived cache of the wait-time data are stored in the app's private storage area on your device only.</p>
+        <p>Your app settings (for example filters and sort order), the <strong>wait-time alerts</strong> you set (attraction and target wait time) and, where applicable, a short-lived cache of the wait-time data are stored in the app's private storage area on your device only.</p>
         <p>
             This information is never transmitted to the developer or to a third party, is not accessible to other apps,
             and is deleted completely when you clear the app's data or uninstall the app.
@@ -64,9 +72,11 @@
 
         <h2>4. Internet connections and third parties</h2>
         <p>
-            To show live wait times, the app requests them from a <strong>publicly accessible third-party wait-time
-            API</strong>. The request is a plain request for public park data: it contains no personal data, no account
-            and no identifier of you or your device.
+            To show live wait times, the app requests them from the <strong>publicly accessible wait-time API of
+            <a href="https://www.wartezeiten.app/">wartezeiten.app</a></strong> (<code>api.wartezeiten.app</code>). The
+            request is a plain request for public park data: it contains no personal data, no account and no identifier
+            of you or your device. While a wait-time alert is active, Android's background scheduler (WorkManager)
+            repeats this same request from time to time so the app can notify you locally when the wait drops.
         </p>
         <p>
             As with any internet request, the operator of that API necessarily receives technical connection data &ndash;
@@ -80,16 +90,37 @@
         <h2>5. Permissions</h2>
         <ul>
             <li><strong>Internet access</strong> &ndash; needed to load the current wait times.</li>
+            <li><strong>Notifications</strong> &ndash; optional; only used to tell you when an attraction reaches the wait time you set.</li>
         </ul>
 
-        <h2>6. Children</h2>
+        <h2>6. Security</h2>
+        <p>
+            Phantaland Queue Times only reads public information, so there is very little to protect &ndash; and that little is protected well:
+        </p>
+        <ul class="check-list">
+            <li><strong>Encrypted connections.</strong> The wait-time API is contacted exclusively over HTTPS.</li>
+            <li><strong>Nothing personal in requests.</strong> The requests contain no account, no identifier and no personal data &ndash; only &bdquo;give me the current wait times&ldquo;.</li>
+            <li><strong>Alerts are evaluated on your device.</strong> Your wait-time alerts are stored and checked locally; nobody else knows which rides you are waiting for.</li>
+            <li><strong>No developer server.</strong> There is no backend that could be hacked, leak data or be forced to hand over data &ndash; because none exists.</li>
+            <li><strong>Android app sandbox.</strong> Everything the app stores lives in its private storage area, which other apps cannot access.</li>
+            <li><strong>Least privilege.</strong> The app requests only internet access and (optionally) notifications &ndash; no location, contacts, camera, microphone, photos or files.</li>
+            <li><strong>No third-party SDKs that collect data.</strong> The app is built only from open source libraries (AndroidX/Jetpack and Kotlin, Retrofit, OkHttp, Hilt) &ndash; no Google Play Services, no Firebase, no ad or analytics SDKs.</li>
+            <li><strong>Public, reviewable code.</strong> Every change is visible in the public Git history and checked by automated builds (GitHub Actions).</li>
+        </ul>
+        <p>
+            <strong>Found a security issue?</strong> Please report it confidentially by e-mail to
+            <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a>. Reports are taken seriously and
+            fixed as quickly as possible.
+        </p>
+
+        <h2>7. Children</h2>
         <p>
             The app is safe for all age groups from a data protection point of view: since no personal data is
             collected at all, no data of children can be collected either. There is no user-generated content, no chat
             and no advertising.
         </p>
 
-        <h2>7. Your rights</h2>
+        <h2>8. Your rights</h2>
         <p>
             Under the GDPR you have the right of access, rectification, erasure, restriction, data portability and
             objection, and the right to lodge a complaint with a supervisory authority. Because the developer never
@@ -97,25 +128,31 @@
             deleted. Clearing the app's data or uninstalling the app removes everything the app has stored locally.
         </p>
 
-        <h2>8. Open source transparency</h2>
+        <h2>9. Open source &ndash; verify it yourself</h2>
         <p>
-            You do not have to take these statements on trust: the source code is public and can be inspected at
-            <a href="https://github.com/ProfessorQuantumUniverse">github.com/ProfessorQuantumUniverse</a>.
+            This app is <strong>100&nbsp;% Free and Open Source Software</strong>, licensed under the
+            <strong>GNU General Public License v3.0</strong>. You do not have to take any statement on this page on
+            trust: the complete source code is public, and anyone can read it, build the app themselves and confirm
+            that it contains <strong>no trackers, no analytics, no ads and no hidden data collection</strong>.
+        </p>
+        <p>
+            Source code: <a href="https://github.com/ProfessorQuantumUniverse/Phantasialand-Waitingtimes-App">github.com/ProfessorQuantumUniverse/Phantasialand-Waitingtimes-App</a>
+            &ndash; issues, questions and pull requests are welcome.
         </p>
 
         <h2>Disclaimer</h2>
         <p>
             This is an unofficial app. It is not affiliated with, endorsed by or sponsored by Phantasialand. The wait
-            time data is provided through a publicly accessible API.
+            time data is provided by wartezeiten.app through a publicly accessible API.
         </p>
 
-        <h2>9. Changes to this policy</h2>
+        <h2>10. Changes to this policy</h2>
         <p>
             Should updates become necessary, they will be published on this page and the date below will be updated.
             The core principle of not collecting user data will not change.
         </p>
 
-        <h2>10. Contact</h2>
+        <h2>11. Contact</h2>
         <p>
             <strong>Universe Lab</strong> &ndash; Lorenzo Bay-M&uuml;ller<br>
             Germany<br>
@@ -123,7 +160,7 @@
         </p>
 
         <div class="footer">
-            <p>Last updated: 28 August 2026 &middot; Effective as of: 28 August 2026</p>
+            <p>Last updated: 12 October 2026 &middot; Effective as of: 28 August 2026</p>
             <p><a href="/">Overview of all apps by Universe Lab</a></p>
         </div>
     </div>

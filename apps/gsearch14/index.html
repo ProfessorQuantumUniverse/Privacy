@@ -22,8 +22,16 @@
             <p><strong>Account holder / responsible entity as shown on Google Play:</strong> Theresa de Wet Bay Mueller, Germany</p>
             <p><strong>Developer and author of the app:</strong> Lorenzo Bay-M&uuml;ller (GitHub: <a href="https://github.com/ProfessorQuantumUniverse">@ProfessorQuantumUniverse</a>)</p>
             <p><strong>Contact e-mail:</strong> <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a></p>
+            <p><strong>Source code:</strong> <a href="https://github.com/ProfessorQuantumUniverse/Gsearch_14">github.com/ProfessorQuantumUniverse/Gsearch_14</a> (GNU GPL v3)</p>
             <p><strong>This document is the privacy policy referenced in the Google Play Store listing of this app.</strong></p>
         </div>
+
+        <ul class="pledge">
+            <li><strong>100&nbsp;% open source</strong>Every line of code is public under the GPL v3.</li>
+            <li><strong>Zero trackers</strong>No analytics, no crash reporting, no telemetry, no tracking SDKs.</li>
+            <li><strong>Zero ads</strong>No advertising and no ad IDs &ndash; ever.</li>
+            <li><strong>No middleman</strong>Searches go straight to the engine you chose &ndash; never via the developer.</li>
+        </ul>
 
         <h2>1. What this app does</h2>
         <p>Gsearch14 is an independent third-party utility that modifies your web search query so that results are shown as a clean, link-focused list instead of AI-generated summaries. Results open in an in-app browser.</p>
@@ -56,28 +64,40 @@
         </p>
 
         <h2>3. Data that stays on your device</h2>
-        <p>Your app settings (for example the light/dark theme) and, where the app offers it, your local search history are stored in the app's private storage area on your device only. Clearing the app data or uninstalling the app removes them completely.</p>
+        <p>The following is stored in the app's private storage area on your device only:</p>
+        <ul>
+            <li>your app settings (for example the selected search engine and the theme);</li>
+            <li>your <strong>search history</strong> and your <strong>bookmarks</strong> &ndash; you can clear the history at any time, and in incognito mode no history is recorded;</li>
+            <li>like every browser, the in-app browser may keep <strong>cookies and a cache</strong> of the websites you visit on your device; cookies can be blocked in the settings.</li>
+        </ul>
         <p>
-            This information is never transmitted to the developer or to a third party, is not accessible to other apps,
+            Apart from cookies, which the in-app browser returns only to the website that set them (as every browser
+            does), this information is never transmitted to the developer or to a third party, is not accessible to other apps,
             and is deleted completely when you clear the app's data or uninstall the app.
         </p>
 
         <h2>4. Internet connections and third parties</h2>
         <p>
-            Gsearch14 needs the internet to do its job. Two kinds of connection happen, and in both cases the connection
+            Gsearch14 needs the internet to do its job. Three kinds of connection happen, and in all cases the connection
             goes <strong>directly from your device to the service concerned</strong> &ndash; never through a server of the
             developer:
         </p>
         <ul>
-            <li><strong>Your search term is sent to the search engine (Google Search)</strong> so that it can return
-                results, exactly as it would be if you typed the same query into a browser.</li>
+            <li><strong>Your search term is sent to the search engine you selected</strong> &ndash;
+                <strong>Google Search</strong>, <strong>Marginalia Search</strong> or <strong>Wikipedia</strong> &ndash;
+                so that it can return results, exactly as it would be if you typed the same query into a browser.</li>
+            <li><strong>Search suggestions:</strong> while you type, the text typed so far is sent to the suggestion
+                service of the selected engine (Google, Wikipedia, or DuckDuckGo for Marginalia, which has none of its
+                own). You can switch suggestions off in the settings; then nothing is sent until you start the search.</li>
             <li><strong>When you open a result, your device contacts that website.</strong></li>
         </ul>
         <p>
             These providers necessarily receive technical connection data (in particular your IP address, the time of the
             request and your user agent) and the content of your request, and they process it under their own privacy
-            policies &ndash; for Google Search see the
-            <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The developer receives none of this
+            policies &ndash; see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, the
+            <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Privacy Policy</a>, the
+            <a href="https://marginalia-search.com/">Marginalia Search</a> website and the
+            <a href="https://duckduckgo.com/privacy">DuckDuckGo Privacy Policy</a>. The developer receives none of this
             and cannot see what you search for.
         </p>
         <p>
@@ -87,16 +107,37 @@
         <h2>5. Permissions</h2>
         <ul>
             <li><strong>Internet access</strong> &ndash; needed to perform searches and to display web pages in the in-app browser.</li>
+            <li><strong>Network state</strong> &ndash; to check whether a network connection is available before a search is started.</li>
         </ul>
 
-        <h2>6. Children</h2>
+        <h2>6. Security</h2>
+        <p>
+            Gsearch14 is designed so that the developer is never in the path of your searches:
+        </p>
+        <ul class="check-list">
+            <li><strong>Direct connections only.</strong> Your device talks directly to the search engine and websites you choose. No proxy, no developer server, nothing in between.</li>
+            <li><strong>Encrypted search requests.</strong> All requests the app itself makes to search engines and suggestion services use HTTPS.</li>
+            <li><strong>Privacy controls in your hands.</strong> Incognito mode (no history), cookie blocking for the in-app browser, switchable search suggestions and one-tap history deletion.</li>
+            <li><strong>No developer server.</strong> There is no backend that could be hacked, leak data or be forced to hand over data &ndash; because none exists.</li>
+            <li><strong>Android app sandbox.</strong> Everything the app stores lives in its private storage area, which other apps cannot access.</li>
+            <li><strong>Least privilege.</strong> The app requests only internet and network-state access &ndash; no location, contacts, camera, microphone, photos or files.</li>
+            <li><strong>No third-party SDKs that collect data.</strong> The app is built only from open source libraries (AndroidX/Jetpack and Kotlin) &ndash; no Google Play Services, no Firebase, no ad or analytics SDKs.</li>
+            <li><strong>Public, reviewable code.</strong> Every change is visible in the public Git history and checked by automated builds (GitHub Actions).</li>
+        </ul>
+        <p>
+            <strong>Found a security issue?</strong> Please report it confidentially by e-mail to
+            <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a>. Reports are taken seriously and
+            fixed as quickly as possible.
+        </p>
+
+        <h2>7. Children</h2>
         <p>
             The app is safe for all age groups from a data protection point of view: since no personal data is
             collected at all, no data of children can be collected either. There is no user-generated content, no chat
             and no advertising.
         </p>
 
-        <h2>7. Your rights</h2>
+        <h2>8. Your rights</h2>
         <p>
             Under the GDPR you have the right of access, rectification, erasure, restriction, data portability and
             objection, and the right to lodge a complaint with a supervisory authority. Because the developer never
@@ -104,10 +145,16 @@
             deleted. Clearing the app's data or uninstalling the app removes everything the app has stored locally.
         </p>
 
-        <h2>8. Open source transparency</h2>
+        <h2>9. Open source &ndash; verify it yourself</h2>
         <p>
-            You do not have to take these statements on trust: the source code is public and can be inspected at
-            <a href="https://github.com/ProfessorQuantumUniverse">github.com/ProfessorQuantumUniverse</a>.
+            This app is <strong>100&nbsp;% Free and Open Source Software</strong>, licensed under the
+            <strong>GNU General Public License v3.0</strong>. You do not have to take any statement on this page on
+            trust: the complete source code is public, and anyone can read it, build the app themselves and confirm
+            that it contains <strong>no trackers, no analytics, no ads and no hidden data collection</strong>.
+        </p>
+        <p>
+            Source code: <a href="https://github.com/ProfessorQuantumUniverse/Gsearch_14">github.com/ProfessorQuantumUniverse/Gsearch_14</a>
+            &ndash; issues, questions and pull requests are welcome.
         </p>
 
         <h2>Disclaimer</h2>
@@ -116,13 +163,13 @@
             with, endorsed by or sponsored by Google LLC.
         </p>
 
-        <h2>9. Changes to this policy</h2>
+        <h2>10. Changes to this policy</h2>
         <p>
             Should updates become necessary, they will be published on this page and the date below will be updated.
             The core principle of not collecting user data will not change.
         </p>
 
-        <h2>10. Contact</h2>
+        <h2>11. Contact</h2>
         <p>
             <strong>Universe Lab</strong> &ndash; Lorenzo Bay-M&uuml;ller<br>
             Germany<br>
@@ -130,7 +177,7 @@
         </p>
 
         <div class="footer">
-            <p>Last updated: 28 August 2026 &middot; Effective as of: 28 August 2026</p>
+            <p>Last updated: 12 October 2026 &middot; Effective as of: 28 August 2026</p>
             <p><a href="/">Overview of all apps by Universe Lab</a></p>
         </div>
     </div>

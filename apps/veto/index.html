@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy &ndash; Veto (Universe Lab)</title>
+    <meta name="description" content="Privacy policy for the Android app Veto (com.quantum_prof.vtscansuite), the open source VirusTotal client by Universe Lab / Lorenzo Bay-Mueller. No personal data is collected, no trackers, no ads.">
+    <link rel="canonical" href="https://privacy.lorenzobaymueller.me/apps/veto/">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <p class="lang-switch"><a href="/">&larr; All apps</a> &middot; <a href="/de/">Deutsch</a></p>
+
+        <h1>Privacy Policy</h1>
+        <p class="intro">For the Android application &bdquo;Veto&ldquo;</p>
+
+        <div class="identity">
+            <p><strong>App title on Google Play:</strong> Veto</p>
+            <p><strong>Application ID (package name):</strong> <code>com.quantum_prof.vtscansuite</code></p>
+            <p><strong>Google Play listing:</strong> <a href="https://play.google.com/store/apps/details?id=com.quantum_prof.vtscansuite">play.google.com/store/apps/details?id=com.quantum_prof.vtscansuite</a></p>
+            <p><strong>Developer name as shown on Google Play:</strong> Universe Lab</p>
+            <p><strong>Account holder / responsible entity as shown on Google Play:</strong> Theresa de Wet Bay Mueller, Germany</p>
+            <p><strong>Developer and author of the app:</strong> Lorenzo Bay-M&uuml;ller (GitHub: <a href="https://github.com/ProfessorQuantumUniverse">@ProfessorQuantumUniverse</a>)</p>
+            <p><strong>Contact e-mail (support address of this Play listing):</strong> <a href="mailto:makerlab.fffm+google-play@gmail.com">makerlab.fffm+google-play@gmail.com</a></p>
+            <p><strong>Source code:</strong> <a href="https://github.com/ProfessorQuantumUniverse/Veto">github.com/ProfessorQuantumUniverse/Veto</a> (GNU GPL v3)</p>
+            <p><strong>This document is the privacy policy referenced in the Google Play Store listing of this app.</strong></p>
+        </div>
+
+        <ul class="pledge">
+            <li><strong>100&nbsp;% open source</strong>Every line of code is public under the GPL v3.</li>
+            <li><strong>Zero trackers</strong>No analytics, no crash reporting, no telemetry, no tracking SDKs.</li>
+            <li><strong>Zero ads</strong>No advertising and no ad IDs &ndash; ever.</li>
+            <li><strong>No account, no server</strong>The developer receives nothing at all.</li>
+        </ul>
+
+        <h2>1. What this app does</h2>
+        <p>
+            Veto is an open source VirusTotal client for Android. You can submit a <strong>file</strong>, a
+            <strong>link</strong> or one of your <strong>installed apps</strong> to the VirusTotal service, follow the
+            analysis in real time and read the report &ndash; from a single verdict down to every field the service
+            returns. You use your <strong>own free VirusTotal API key</strong>, so every scan runs under your own
+            VirusTotal account and goes directly from your device to VirusTotal.
+        </p>
+        <p>
+            The app is Free and Open Source Software (FOSS), developed as a private, non-commercial hobby project. It
+            contains no ads, no in-app purchases and no accounts of its own.
+        </p>
+
+        <h2>2. No data collection</h2>
+        <p class="callout">
+            This app collects, stores, shares or transmits <span class="highlight">NO</span> personal data or sensitive
+            user information to the developer.
+        </p>
+        <p>
+            The developer operates no server, no user account system and no database, so there is no place where
+            personal data about you could be stored. Veto has no &bdquo;phone home&ldquo; of any kind. Specifically, the
+            app does <strong class="highlight">not</strong> collect:
+        </p>
+        <ul class="no-data-list">
+            <li>Your name, e-mail address, phone number or any other contact information.</li>
+            <li>Your device's unique identifiers (Device ID, Advertising ID, IMEI, etc.).</li>
+            <li>Your precise or approximate location.</li>
+            <li>Your contacts, calendars, messages or call logs.</li>
+            <li>The list of apps installed on your device.</li>
+            <li>Your files, your scan history or the content of your clipboard.</li>
+            <li>Your VirusTotal API key.</li>
+            <li>Usage analytics, behavioural profiles, crash reports or telemetry of any kind.</li>
+        </ul>
+        <p>
+            This matches the &bdquo;Data safety&ldquo; declaration of this app on Google Play:
+            <em>no data collected, no data shared with third parties</em>.
+        </p>
+
+        <h2>3. Data that stays on your device</h2>
+        <p>The following is stored in the app's private storage area on your device only (Android DataStore):</p>
+        <ul>
+            <li><strong>Your VirusTotal API key</strong> &ndash; encrypted (see section 6).</li>
+            <li><strong>Reports you choose to save</strong>, so you can open them again later, even offline.</li>
+            <li><strong>Your app settings</strong>, for example the report mode and whether help notes are shown.</li>
+        </ul>
+        <p>
+            When you scan a file you picked, the app makes a <strong>temporary copy in its private cache</strong> so it
+            can calculate the file's hash and upload it if necessary. This copy is deleted as soon as the scan is
+            finished.
+        </p>
+        <p>
+            None of this is ever transmitted to the developer. Clearing the app's data or uninstalling the app removes
+            everything completely. If you have enabled Android's own device backup, Android may include your saved
+            reports and settings in <em>your</em> personal backup; your API key is explicitly excluded from cloud backup
+            and from device-to-device transfer.
+        </p>
+
+        <h2>4. Internet connections and third parties: VirusTotal</h2>
+        <p>
+            Veto talks to exactly <strong>one</strong> service: the official <strong>VirusTotal API</strong>
+            (<code>www.virustotal.com</code>), and only when you start a scan yourself. The connection goes directly
+            from your device to VirusTotal over HTTPS, authenticated with your own API key &ndash; never through a server
+            of the developer. What is sent depends on what you scan:
+        </p>
+        <ul>
+            <li><strong>Files and installed apps:</strong> the app first sends only the file's <strong>SHA-256
+                hash</strong> to look up an existing report. Only if VirusTotal does not know the file yet is the
+                <strong>file itself</strong> (for an installed app: its APK) uploaded for analysis.</li>
+            <li><strong>Links:</strong> the <strong>URL</strong> you enter, paste or share to Veto is submitted to
+                VirusTotal.</li>
+        </ul>
+        <p>
+            VirusTotal (a service of Google) necessarily receives technical connection data such as your IP address,
+            your API key (which identifies your VirusTotal account) and the item you submitted, and processes them under
+            its own terms and privacy policy &ndash; see the
+            <a href="https://docs.virustotal.com/docs/privacy-policy">VirusTotal Privacy Policy</a> and the
+            <a href="https://docs.virustotal.com/docs/terms-of-service">VirusTotal Terms of Service</a>. The developer
+            has no access to anything you submit and cannot see what you scan.
+        </p>
+        <div class="warning">
+            <p>
+                <strong>Please note:</strong> according to VirusTotal's terms, files and URLs submitted to VirusTotal
+                may be shared with the security community, antivirus partners and VirusTotal's premium customers.
+                <strong>Do not upload documents that contain personal, confidential or sensitive information</strong>
+                (for example contracts, ID scans or private photos). For such files a hash lookup is usually the safer
+                option. This is how VirusTotal works and is outside the control of this app.
+            </p>
+        </div>
+        <p>
+            Apart from VirusTotal, the app makes no network connections at all. It contains no advertising, no analytics
+            SDK, no crash reporter, no in-app purchases and no tracking of any kind. Links such as &bdquo;Get an API
+            key&ldquo; or &bdquo;Open on VirusTotal&ldquo; open in your own browser only when you tap them.
+        </p>
+
+        <h2>5. Permissions</h2>
+        <ul>
+            <li><strong>Internet access</strong> &ndash; to reach the VirusTotal API.</li>
+            <li><strong>Query all packages</strong> &ndash; to show the list of apps installed on your device so that you
+                can pick one to scan. The list is built and shown <strong>only on your device</strong>; it is never
+                sent anywhere. Only the app you actively select is hashed and, if necessary, uploaded.</li>
+            <li><strong>Post notifications</strong> &ndash; to show scan progress and the notification when a result is
+                ready.</li>
+            <li><strong>Foreground service (data sync)</strong> &ndash; to keep a running scan alive while the app is in
+                the background.</li>
+            <li><strong>Vibrate</strong> &ndash; for haptic feedback.</li>
+        </ul>
+        <p>
+            <strong>Clipboard:</strong> when you open the app, Veto checks locally whether your clipboard contains a
+            web link, so it can offer a &bdquo;Scan this link&ldquo; shortcut. The clipboard content is only evaluated on
+            your device and is <strong>never sent anywhere unless you tap the shortcut</strong>. Android may display a
+            short system notice when an app reads the clipboard &ndash; this is that check.
+        </p>
+        <p>
+            <strong>Sharing to Veto:</strong> if you share a link to Veto from another app, Veto starts a scan of that
+            link, because that is the action you requested.
+        </p>
+
+        <h2>6. Security</h2>
+        <p>
+            Because Veto handles a credential (your API key) and potentially sensitive files, security was built in
+            from the start:
+        </p>
+        <ul class="check-list">
+            <li><strong>Encrypted API key.</strong> Your VirusTotal API key is encrypted with an <strong>AES-256-GCM key
+                held in the Android Keystore</strong>. That key never leaves the Keystore, so the stored value is useless
+                outside your device.</li>
+            <li><strong>Key stays on your device.</strong> The key is only ever used to authenticate your own requests to
+                VirusTotal. The settings store containing it is excluded from cloud backup and from device-to-device
+                transfer, so it is never copied anywhere else. On a new device you simply enter the key again.</li>
+            <li><strong>HTTPS only.</strong> Unencrypted (cleartext) network traffic is disabled for the whole app. All
+                communication with VirusTotal is encrypted in transit.</li>
+            <li><strong>No developer server.</strong> There is no backend that could be hacked, leak data or be forced
+                to hand over data &ndash; because none exists.</li>
+            <li><strong>No logging of secrets.</strong> Network logging exists only in debug builds and redacts the API
+                key header; release builds from Google Play do not log network traffic.</li>
+            <li><strong>Android app sandbox.</strong> All app data lives in the app's private storage, inaccessible to
+                other apps. Temporary file copies are deleted right after the scan.</li>
+            <li><strong>Least privilege.</strong> The app requests only the permissions listed above and no access to
+                your location, contacts, camera, microphone or storage beyond the files you explicitly pick.</li>
+            <li><strong>No third-party SDKs that collect data.</strong> The app is built only from open source
+                libraries (AndroidX/Jetpack, Kotlin, Retrofit, OkHttp, Hilt).</li>
+            <li><strong>Public, reviewable code.</strong> Every change is visible in the public Git history and checked by
+                automated builds (GitHub Actions).</li>
+        </ul>
+        <p>
+            <strong>Found a security issue?</strong> Please report it confidentially by e-mail to
+            <a href="mailto:makerlab.fffm+google-play@gmail.com">makerlab.fffm+google-play@gmail.com</a>. Reports are
+            taken seriously and fixed as quickly as possible.
+        </p>
+
+        <h2>7. Children</h2>
+        <p>
+            The app is safe for all age groups from a data protection point of view: since no personal data is
+            collected at all, no data of children can be collected either. There is no user-generated content, no chat
+            and no advertising. The use of VirusTotal itself is subject to VirusTotal's terms.
+        </p>
+
+        <h2>8. Your rights</h2>
+        <p>
+            Under the GDPR you have the right of access, rectification, erasure, restriction, data portability and
+            objection, and the right to lodge a complaint with a supervisory authority. Because the developer never
+            receives or stores personal data about you, there is no data set that could be disclosed, corrected or
+            deleted. Clearing the app's data or uninstalling the app removes everything the app has stored locally.
+            For data you have submitted to VirusTotal, please contact VirusTotal directly as described in its privacy
+            policy.
+        </p>
+
+        <h2>9. Open source &ndash; verify it yourself</h2>
+        <p>
+            Veto is <strong>100&nbsp;% Free and Open Source Software</strong>, licensed under the
+            <strong>GNU General Public License v3.0</strong>. You do not have to take any statement on this page on
+            trust: the complete source code is public, and anyone can read it, build the app themselves and confirm
+            that it contains <strong>no trackers, no analytics, no ads and no hidden data collection</strong>.
+        </p>
+        <p>
+            Source code: <a href="https://github.com/ProfessorQuantumUniverse/Veto">github.com/ProfessorQuantumUniverse/Veto</a>
+            &ndash; issues, questions and pull requests are welcome.
+        </p>
+
+        <h2>Disclaimer</h2>
+        <p>
+            Veto is an independent, unofficial client for the VirusTotal API. It is not affiliated with, endorsed by or
+            sponsored by VirusTotal or Google LLC. The scan results are produced by VirusTotal and the antivirus engines
+            it aggregates; the app only displays them.
+        </p>
+
+        <h2>10. Changes to this policy</h2>
+        <p>
+            Should updates become necessary, they will be published on this page and the date below will be updated.
+            The core principle of not collecting user data will not change.
+        </p>
+
+        <h2>11. Contact</h2>
+        <p>
+            <strong>Universe Lab</strong> &ndash; Lorenzo Bay-M&uuml;ller<br>
+            Germany<br>
+            E-mail: <a href="mailto:makerlab.fffm+google-play@gmail.com">makerlab.fffm+google-play@gmail.com</a>
+        </p>
+
+        <div class="footer">
+            <p>Last updated: 12 October 2026 &middot; Effective as of: 12 October 2026</p>
+            <p><a href="/">Overview of all apps by Universe Lab</a></p>
+        </div>
+    </div>
+</body>
+</html>
