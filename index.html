@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy – Universe Lab (Lorenzo Bay-Müller) Android Apps</title>
-    <meta name="description" content="Official privacy policy for all Android apps published on Google Play by Universe Lab (Lorenzo Bay-Müller): reReminder, Gsearch14 – Search without AI and Phantaland Queue Times.">
+    <meta name="description" content="Official privacy policy for all Android apps published on Google Play by Universe Lab (Lorenzo Bay-Müller): reReminder, Gsearch14 – Search without AI, Phantaland Queue Times and Veto. 100% open source, no trackers, no ads.">
     <link rel="canonical" href="https://privacy.lorenzobaymueller.me/">
     <link rel="alternate" hreflang="de" href="https://privacy.lorenzobaymueller.me/de/">
     <link rel="alternate" hreflang="en" href="https://privacy.lorenzobaymueller.me/">
@@ -22,10 +22,17 @@
             <p><strong>Account holder / responsible entity as shown on Google Play:</strong> Theresa de Wet Bay Mueller, Germany</p>
             <p><strong>Developer and author of the apps:</strong> Lorenzo Bay-Müller (GitHub: <a href="https://github.com/ProfessorQuantumUniverse">@ProfessorQuantumUniverse</a>)</p>
             <p><strong>Google Play developer page:</strong> <a href="https://play.google.com/store/apps/dev?id=4730347811715684528">play.google.com/store/apps/dev?id=4730347811715684528</a></p>
-            <p><strong>Contact e-mail (support address of the Play listings):</strong> <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a></p>
+            <p><strong>Contact e-mail (support address of the Play listings):</strong> <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a> &ndash; the Veto listing uses the alias <a href="mailto:makerlab.fffm+google-play@gmail.com">makerlab.fffm+google-play@gmail.com</a>, which reaches the same mailbox.</p>
             <p><strong>Data controller under Art. 4(7) GDPR:</strong> Lorenzo Bay-Müller, acting as the private, non-commercial developer behind "Universe Lab". There is no company and no legal entity behind these apps – they are a hobby project.</p>
             <p><strong>This document is the privacy policy referenced in the Google Play Store listings of the apps named below.</strong></p>
         </div>
+
+        <ul class="pledge">
+            <li><strong>100&nbsp;% open source</strong>Every app is public under the GPL v3 &ndash; check it yourself.</li>
+            <li><strong>Zero trackers</strong>No analytics, no crash reporting, no telemetry, no tracking SDKs.</li>
+            <li><strong>Zero ads</strong>No advertising and no ad IDs &ndash; ever.</li>
+            <li><strong>No account, no server</strong>The developer receives nothing at all.</li>
+        </ul>
 
         <h2>1. Which apps this policy covers</h2>
         <p>
@@ -41,6 +48,7 @@
                         <th>App title on Google Play</th>
                         <th>Application ID (package name)</th>
                         <th>App-specific policy</th>
+                        <th>Source code</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,16 +56,25 @@
                         <td>reReminder</td>
                         <td><code>com.olaf.rereminder</code></td>
                         <td><a href="/apps/rereminder/">Open</a></td>
+                        <td><a href="https://github.com/ProfessorQuantumUniverse/reReminder">GitHub</a></td>
                     </tr>
                     <tr>
                         <td>Gsearch14 – Search without AI</td>
                         <td><code>com.olafsapp.gsearch14</code></td>
                         <td><a href="/apps/gsearch14/">Open</a></td>
+                        <td><a href="https://github.com/ProfessorQuantumUniverse/Gsearch_14">GitHub</a></td>
                     </tr>
                     <tr>
                         <td>Phantaland Queue Times</td>
                         <td><code>com.quantum_prof.phantalandwaittimes</code></td>
                         <td><a href="/apps/phantaland-queue-times/">Open</a></td>
+                        <td><a href="https://github.com/ProfessorQuantumUniverse/Phantasialand-Waitingtimes-App">GitHub</a></td>
+                    </tr>
+                    <tr>
+                        <td>Veto</td>
+                        <td><code>com.quantum_prof.vtscansuite</code></td>
+                        <td><a href="/apps/veto/">Open</a></td>
+                        <td><a href="https://github.com/ProfessorQuantumUniverse/Veto">GitHub</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -65,7 +82,8 @@
 
         <p>
             All of these apps are published under the developer name <strong>Universe Lab</strong> on Google Play and are
-            developed by <strong>Lorenzo Bay-Müller</strong> as free and open source software (FOSS). If a further app is
+            developed by <strong>Lorenzo Bay-Müller</strong> as <strong>100&nbsp;% free and open source software (FOSS)</strong>
+            under the GNU GPL v3. If a further app is
             published under the same developer account, it will be added to the table above and is covered by this policy
             from the moment it appears there.
         </p>
@@ -92,6 +110,7 @@
             <li>Your precise or approximate location.</li>
             <li>Your contacts, calendars, messages or call logs.</li>
             <li>Your photos, videos, audio or any files stored on your device.</li>
+            <li>The list of apps installed on your device, your clipboard or your search and scan history.</li>
             <li>Usage analytics, behavioural profiles, crash reports or telemetry of any kind.</li>
             <li>Payment or financial information – the apps contain no purchases and no subscriptions.</li>
         </ul>
@@ -102,8 +121,8 @@
 
         <h2>3. Data that stays on your device</h2>
         <p>
-            Some apps need to remember things in order to work at all – for example your reminders in reReminder or your
-            theme preference in Gsearch14. This information is stored <strong class="highlight">exclusively in the app's
+            Some apps need to remember things in order to work at all – for example your reminders in reReminder, your
+            search history in Gsearch14 or your encrypted VirusTotal API key and saved reports in Veto. This information is stored <strong class="highlight">exclusively in the app's
             private storage area on your own device</strong>, using standard Android mechanisms. It is:
         </p>
         <ul>
@@ -114,13 +133,15 @@
         </ul>
         <p>
             Under data protection law this locally stored content is not "processed" by the developer, because the
-            developer never has access to it.
+            developer never has access to it. If you have enabled Android's own device backup, Android may include app
+            data in <em>your</em> personal backup; this is controlled by you and your backup provider, not by the
+            developer. Veto explicitly excludes your API key from any backup.
         </p>
 
         <h2>4. Internet connections and third parties</h2>
         <p>
             Some apps must contact an external service to fulfil their core function – for example to retrieve live
-            wait times or to display search results. In that case no data is sent to the developer, but a direct
+            wait times, to display search results or to check a file with VirusTotal. In that case no data is sent to the developer, but a direct
             connection between your device and that external service takes place. As with any request on the internet,
             the operator of that service necessarily receives technical connection data such as your
             <strong>IP address</strong>, the time of the request and your user agent, and, where applicable, the content
@@ -134,6 +155,7 @@
         <ul>
             <li><strong>no advertising networks</strong> and no ads;</li>
             <li><strong>no analytics or tracking SDKs</strong> (no Firebase Analytics, no Google Analytics, no Crashlytics, no attribution SDKs);</li>
+            <li><strong>no crash reporters and no telemetry</strong> &ndash; the apps never &bdquo;phone home&ldquo;;</li>
             <li><strong>no social media SDKs</strong>;</li>
             <li><strong>no in-app purchases</strong> and no payment processing.</li>
         </ul>
@@ -157,39 +179,78 @@
             <h3>reReminder – <code>com.olaf.rereminder</code></h3>
             <p><strong>Purpose:</strong> a reminder app that repeatedly notifies you about healthy habits (drinking water, taking breaks, medication, movement).</p>
             <p><strong>Data stored on your device:</strong> the reminders you create (title, interval, schedule) and your app settings.</p>
-            <p><strong>Data sent anywhere:</strong> none. The app works offline and does not need an internet connection for its core function.</p>
-            <p><strong>Typical permissions:</strong> notifications (to display reminders), scheduling of exact alarms (so that a reminder fires on time), and restart after device reboot (so that your reminders survive a restart).</p>
+            <p><strong>Data sent anywhere:</strong> none. The app works 100&nbsp;% offline and does not even request the internet permission, so it is technically unable to send data anywhere.</p>
+            <p><strong>Permissions:</strong> notifications (to display reminders), exact alarms (so that a reminder fires on time), restart after device reboot (so that your reminders survive a restart), full-screen notifications, vibration, wake lock and a foreground service (for alarm-style reminders), and a request to ignore battery optimisations that you confirm yourself.</p>
             <p><a href="/apps/rereminder/">Full policy for this app</a></p>
         </div>
 
         <div class="app-block">
             <h3>Gsearch14 – Search without AI – <code>com.olafsapp.gsearch14</code></h3>
             <p><strong>Purpose:</strong> an independent third-party utility that modifies your search query so that web search results are shown as a plain list of links instead of AI-generated summaries, and opens them in an in-app browser.</p>
-            <p><strong>Data stored on your device:</strong> your app settings (for example theme) and, if the app offers this, your local search history. This never leaves your device and is removed when you clear the app data or uninstall the app.</p>
-            <p><strong>Data sent to third parties:</strong> the search term you enter is sent to the <strong>search engine</strong> (Google Search) in order to return results, exactly as it would be in any browser. When you open a result, your device contacts the <strong>website you selected</strong>. Those providers receive your IP address and the usual technical request data and process it under their own privacy policies – see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> for Google Search. Nothing is sent to the developer.</p>
+            <p><strong>Data stored on your device:</strong> your app settings (for example search engine and theme), your search history and bookmarks, and the cookies and cache of the in-app browser. This never leaves your device (cookies only go back to the website that set them) and is removed when you clear the app data or uninstall the app. Incognito mode and cookie blocking are available in the settings.</p>
+            <p><strong>Data sent to third parties:</strong> the search term you enter is sent to the <strong>search engine you selected</strong> (Google Search, Marginalia Search or Wikipedia) in order to return results, exactly as it would be in any browser. If search suggestions are switched on, the text typed so far is sent to that engine's suggestion service (for Marginalia: DuckDuckGo). When you open a result, your device contacts the <strong>website you selected</strong>. Those providers receive your IP address and the usual technical request data and process it under their own privacy policies – for example the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Nothing is sent to the developer.</p>
             <p><strong>Note:</strong> Gsearch14 is an independent utility and is not affiliated with, endorsed by or sponsored by Google LLC.</p>
-            <p><strong>Typical permissions:</strong> internet access.</p>
+            <p><strong>Permissions:</strong> internet access and network state.</p>
             <p><a href="/apps/gsearch14/">Full policy for this app</a></p>
         </div>
 
         <div class="app-block">
             <h3>Phantaland Queue Times – <code>com.quantum_prof.phantalandwaittimes</code></h3>
             <p><strong>Purpose:</strong> an unofficial app that shows current wait times for the attractions of the Phantasialand theme park.</p>
-            <p><strong>Data stored on your device:</strong> your app settings (for example filters and sort order) and, where applicable, a temporary cache of the wait-time data.</p>
-            <p><strong>Data sent to third parties:</strong> to display wait times, the app requests them from a <strong>publicly accessible third-party wait-time API</strong>. The request contains no personal data and no identifier of you; it is a plain request for public park data. The API operator receives the technical connection data described in section 4 (in particular your IP address) and processes it under its own privacy policy. Nothing is sent to the developer.</p>
+            <p><strong>Data stored on your device:</strong> your app settings (for example filters and sort order), the wait-time alerts you set and, where applicable, a temporary cache of the wait-time data.</p>
+            <p><strong>Data sent to third parties:</strong> to display wait times, the app requests them from the <strong>publicly accessible wait-time API of <a href="https://www.wartezeiten.app/">wartezeiten.app</a></strong>; while an alert is active, this request is repeated in the background so the app can notify you locally. The request contains no personal data and no identifier of you; it is a plain request for public park data. The API operator receives the technical connection data described in section 4 (in particular your IP address) and processes it under its own privacy policy. Nothing is sent to the developer.</p>
             <p><strong>Note:</strong> this is an unofficial app and is not affiliated with, endorsed by or sponsored by Phantasialand.</p>
-            <p><strong>Typical permissions:</strong> internet access.</p>
+            <p><strong>Permissions:</strong> internet access and (optionally) notifications for wait-time alerts.</p>
             <p><a href="/apps/phantaland-queue-times/">Full policy for this app</a></p>
         </div>
 
-        <h2>7. Children</h2>
+        <div class="app-block">
+            <h3>Veto – <code>com.quantum_prof.vtscansuite</code></h3>
+            <p><strong>Purpose:</strong> an open source VirusTotal client. You can submit a file, a link or one of your installed apps to VirusTotal and read the analysis report. You use your own free VirusTotal API key.</p>
+            <p><strong>Data stored on your device:</strong> your VirusTotal API key (encrypted with an AES-256-GCM key from the Android Keystore and excluded from backups), the reports you choose to save and your settings. Files you pick are copied temporarily to the app's cache for hashing and deleted after the scan.</p>
+            <p><strong>Data sent to third parties:</strong> only when you start a scan, and only to the <strong>VirusTotal API</strong> (a service of Google), directly over HTTPS with your own API key: for files and apps first only the SHA-256 hash and, if VirusTotal does not know the file yet, the file itself (for apps: the APK); for links the URL. VirusTotal processes this under its own <a href="https://docs.virustotal.com/docs/privacy-policy">privacy policy</a> and <a href="https://docs.virustotal.com/docs/terms-of-service">terms</a>; according to those terms, submitted files and URLs may be shared with the security community – please do not upload files containing personal or confidential information. Nothing is sent to the developer.</p>
+            <p><strong>Note:</strong> Veto is an independent client and is not affiliated with, endorsed by or sponsored by VirusTotal or Google LLC.</p>
+            <p><strong>Permissions:</strong> internet access, query all packages (to list your installed apps locally so you can pick one – the list never leaves your device), notifications and a foreground service (scan progress and result), vibration (haptic feedback). The clipboard is only checked locally for a link to offer a &bdquo;scan this link&ldquo; shortcut.</p>
+            <p><a href="/apps/veto/">Full policy for this app</a></p>
+        </div>
+
+        <h2>7. Security</h2>
+        <p>
+            The best protection for your data is not to have it. All apps follow the same security principles:
+        </p>
+        <ul class="check-list">
+            <li><strong>No developer server.</strong> There is no backend, no database and no account system that could
+                be hacked, leak data or be forced to hand over data &ndash; because none exists.</li>
+            <li><strong>Direct, encrypted connections.</strong> Where an app needs the internet, it talks directly to the
+                service you use (search engine, wait-time API, VirusTotal) &ndash; never via the developer &ndash; and the
+                app's own requests use HTTPS.</li>
+            <li><strong>Offline where possible.</strong> reReminder does not even have the internet permission; its data
+                technically cannot leave your phone.</li>
+            <li><strong>Secrets are encrypted.</strong> Veto stores your VirusTotal API key encrypted with an AES-256-GCM
+                key from the Android Keystore and excludes it from backups and device transfers.</li>
+            <li><strong>Android app sandbox.</strong> Everything an app stores lives in its private storage area, which
+                other apps cannot access.</li>
+            <li><strong>Least privilege.</strong> Each app requests only the permissions it needs for its own features
+                (listed in section 6). None of them has access to your location, contacts, camera or microphone.</li>
+            <li><strong>No third-party SDKs that collect data.</strong> The apps are built only from open source libraries
+                &ndash; no Google Play Services, no Firebase, no ad or analytics SDKs.</li>
+            <li><strong>Public, reviewable code.</strong> Every change is visible in the public Git history and checked by
+                automated builds (GitHub Actions).</li>
+        </ul>
+        <p>
+            <strong>Found a security issue?</strong> Please report it confidentially by e-mail to
+            <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a>. Reports are taken seriously and fixed
+            as quickly as possible.
+        </p>
+
+        <h2>8. Children</h2>
         <p>
             These apps are not directed at children under the age of 13 in particular, but they are safe for all age
             groups in terms of data protection: since no personal data whatsoever is collected, no data of children can
             be collected either. There is no user-generated content, no chat, no social feature and no advertising.
         </p>
 
-        <h2>8. Your rights</h2>
+        <h2>9. Your rights</h2>
         <p>
             Under the GDPR you have the right of access, rectification, erasure, restriction of processing, data
             portability and objection, as well as the right to lodge a complaint with a supervisory authority. Because
@@ -202,15 +263,23 @@
             information is collected, sold or shared.
         </p>
 
-        <h2>9. Open source transparency (FOSS)</h2>
+        <h2>10. 100&nbsp;% open source &ndash; verify it yourself</h2>
         <p>
-            These apps are Free and Open Source Software. You do not have to take these claims on trust – you can
-            inspect the source code and verify for yourself that there are no hidden trackers or data collection
-            mechanisms. The source code is available at
-            <a href="https://github.com/ProfessorQuantumUniverse">github.com/ProfessorQuantumUniverse</a>.
+            Every app listed here is <strong>Free and Open Source Software</strong>, licensed under the
+            <strong>GNU General Public License v3.0</strong>. This is a deliberate choice: you do not have to take any
+            statement on this page on trust. Anyone can read the complete source code, build the apps themselves and
+            confirm that they contain <strong class="highlight">no trackers, no analytics, no ads and no hidden data
+            collection</strong>.
         </p>
+        <ul>
+            <li>reReminder: <a href="https://github.com/ProfessorQuantumUniverse/reReminder">github.com/ProfessorQuantumUniverse/reReminder</a></li>
+            <li>Gsearch14 – Search without AI: <a href="https://github.com/ProfessorQuantumUniverse/Gsearch_14">github.com/ProfessorQuantumUniverse/Gsearch_14</a></li>
+            <li>Phantaland Queue Times: <a href="https://github.com/ProfessorQuantumUniverse/Phantasialand-Waitingtimes-App">github.com/ProfessorQuantumUniverse/Phantasialand-Waitingtimes-App</a></li>
+            <li>Veto: <a href="https://github.com/ProfessorQuantumUniverse/Veto">github.com/ProfessorQuantumUniverse/Veto</a></li>
+        </ul>
+        <p>Issues, questions and pull requests are welcome.</p>
 
-        <h2>10. This website</h2>
+        <h2>11. This website</h2>
         <p>
             This privacy policy page is hosted on <strong>GitHub Pages</strong> (GitHub, Inc.). Like every web host,
             GitHub processes technical connection data such as your IP address in server logs in order to deliver the
@@ -219,7 +288,7 @@
             <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.
         </p>
 
-        <h2>11. Changes to this policy</h2>
+        <h2>12. Changes to this policy</h2>
         <p>
             Given the strict no-data principle, no substantive changes are expected. Should updates become necessary –
             for example because a new app is added or an app starts using an additional external service – they will be
@@ -227,7 +296,7 @@
             will not change.
         </p>
 
-        <h2>12. Contact</h2>
+        <h2>13. Contact</h2>
         <p>
             If you have any questions or concerns about this privacy policy or about how these apps behave, please get
             in touch:
@@ -239,7 +308,7 @@
         </p>
 
         <div class="footer">
-            <p>Last updated: 28 August 2026 · Effective as of: 28 August 2026</p>
+            <p>Last updated: 12 October 2026 · Effective as of: 28 August 2026</p>
             <p>Privacy policy for the Google Play apps of Universe Lab (Lorenzo Bay-Müller)</p>
         </div>
     </div>

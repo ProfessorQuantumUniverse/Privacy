@@ -22,8 +22,16 @@
             <p><strong>Account holder / responsible entity as shown on Google Play:</strong> Theresa de Wet Bay Mueller, Germany</p>
             <p><strong>Developer and author of the app:</strong> Lorenzo Bay-M&uuml;ller (GitHub: <a href="https://github.com/ProfessorQuantumUniverse">@ProfessorQuantumUniverse</a>)</p>
             <p><strong>Contact e-mail:</strong> <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a></p>
+            <p><strong>Source code:</strong> <a href="https://github.com/ProfessorQuantumUniverse/reReminder">github.com/ProfessorQuantumUniverse/reReminder</a> (GNU GPL v3)</p>
             <p><strong>This document is the privacy policy referenced in the Google Play Store listing of this app.</strong></p>
         </div>
+
+        <ul class="pledge">
+            <li><strong>100&nbsp;% open source</strong>Every line of code is public under the GPL v3.</li>
+            <li><strong>Zero trackers</strong>No analytics, no crash reporting, no telemetry, no tracking SDKs.</li>
+            <li><strong>Zero ads</strong>No advertising and no ad IDs &ndash; ever.</li>
+            <li><strong>No internet at all</strong>The app has no internet permission &ndash; your data cannot leave your phone.</li>
+        </ul>
 
         <h2>1. What this app does</h2>
         <p>reReminder is a simple, open source reminder app. It notifies you repeatedly about healthy habits &ndash; drinking water, taking breaks from screen work, taking medication on schedule or getting up and moving.</p>
@@ -64,9 +72,13 @@
 
         <h2>4. Internet connections and third parties</h2>
         <p>
-            reReminder works <strong class="highlight">offline</strong>. Its core function &ndash; scheduling and showing
-            reminders &ndash; requires no internet connection, and the app sends no data to the developer or to any
-            third-party server. It contains no advertising, no analytics SDK and no tracking of any kind.
+            reReminder works <strong class="highlight">100&nbsp;% offline</strong>. The app does not even request the
+            Android internet permission, so it is <strong>technically unable</strong> to send any data to the developer
+            or to any third-party server. It contains no advertising, no analytics SDK and no tracking of any kind.
+        </p>
+        <p>
+            The help screen contains links to <a href="https://dontkillmyapp.com">dontkillmyapp.com</a> with tips for
+            devices that stop background apps. These links open in your own browser only when you tap them.
         </p>
 
         <h2>5. Permissions</h2>
@@ -74,20 +86,42 @@
             <li><strong>Notifications</strong> &ndash; needed to display the reminders on your device.</li>
             <li><strong>Exact alarms / scheduling</strong> &ndash; needed so that a reminder actually fires at the time you set.</li>
             <li><strong>Start after device reboot</strong> &ndash; needed so that your reminders keep working after you restart your phone.</li>
+            <li><strong>Full-screen notifications</strong> &ndash; only for reminders you set up as an alarm, so they can be shown over the lock screen.</li>
+            <li><strong>Vibration and wake lock</strong> &ndash; to vibrate and to keep the device awake for the moment a reminder is played.</li>
+            <li><strong>Foreground service</strong> &ndash; so that an alarm-style reminder keeps playing reliably until you dismiss it.</li>
+            <li><strong>Request to ignore battery optimisations</strong> &ndash; Android asks <em>you</em> for confirmation; it only prevents the system from silently killing your reminders.</li>
         </ul>
         <p>
             None of these permissions is used to read information about you or to send anything anywhere. They only
             allow the app to alert you at the right moment.
         </p>
 
-        <h2>6. Children</h2>
+        <h2>6. Security</h2>
+        <p>
+            reReminder follows a simple security principle: data that never leaves your device cannot be stolen, sold or leaked.
+        </p>
+        <ul class="check-list">
+            <li><strong>No internet permission.</strong> The app cannot open any network connection. This is enforced by Android itself, not just promised.</li>
+            <li><strong>No developer server.</strong> There is no backend that could be hacked, leak data or be forced to hand over data &ndash; because none exists.</li>
+            <li><strong>Android app sandbox.</strong> Everything the app stores lives in its private storage area, which other apps cannot access.</li>
+            <li><strong>Least privilege.</strong> The app requests only the permissions listed above and no access to your location, contacts, camera, microphone, photos or files.</li>
+            <li><strong>No third-party SDKs that collect data.</strong> The app is built only from open source libraries (AndroidX/Jetpack and Kotlin) &ndash; no Google Play Services, no Firebase, no ad or analytics SDKs.</li>
+            <li><strong>Public, reviewable code.</strong> Every change is visible in the public Git history and checked by automated builds (GitHub Actions).</li>
+        </ul>
+        <p>
+            <strong>Found a security issue?</strong> Please report it confidentially by e-mail to
+            <a href="mailto:makerlab.fffm@gmail.com">makerlab.fffm@gmail.com</a>. Reports are taken seriously and
+            fixed as quickly as possible.
+        </p>
+
+        <h2>7. Children</h2>
         <p>
             The app is safe for all age groups from a data protection point of view: since no personal data is
             collected at all, no data of children can be collected either. There is no user-generated content, no chat
             and no advertising.
         </p>
 
-        <h2>7. Your rights</h2>
+        <h2>8. Your rights</h2>
         <p>
             Under the GDPR you have the right of access, rectification, erasure, restriction, data portability and
             objection, and the right to lodge a complaint with a supervisory authority. Because the developer never
@@ -95,19 +129,25 @@
             deleted. Clearing the app's data or uninstalling the app removes everything the app has stored locally.
         </p>
 
-        <h2>8. Open source transparency</h2>
+        <h2>9. Open source &ndash; verify it yourself</h2>
         <p>
-            You do not have to take these statements on trust: the source code is public and can be inspected at
-            <a href="https://github.com/ProfessorQuantumUniverse">github.com/ProfessorQuantumUniverse</a>.
+            This app is <strong>100&nbsp;% Free and Open Source Software</strong>, licensed under the
+            <strong>GNU General Public License v3.0</strong>. You do not have to take any statement on this page on
+            trust: the complete source code is public, and anyone can read it, build the app themselves and confirm
+            that it contains <strong>no trackers, no analytics, no ads and no hidden data collection</strong>.
+        </p>
+        <p>
+            Source code: <a href="https://github.com/ProfessorQuantumUniverse/reReminder">github.com/ProfessorQuantumUniverse/reReminder</a>
+            &ndash; issues, questions and pull requests are welcome.
         </p>
 
-        <h2>9. Changes to this policy</h2>
+        <h2>10. Changes to this policy</h2>
         <p>
             Should updates become necessary, they will be published on this page and the date below will be updated.
             The core principle of not collecting user data will not change.
         </p>
 
-        <h2>10. Contact</h2>
+        <h2>11. Contact</h2>
         <p>
             <strong>Universe Lab</strong> &ndash; Lorenzo Bay-M&uuml;ller<br>
             Germany<br>
@@ -115,7 +155,7 @@
         </p>
 
         <div class="footer">
-            <p>Last updated: 28 August 2026 &middot; Effective as of: 28 August 2026</p>
+            <p>Last updated: 12 October 2026 &middot; Effective as of: 28 August 2026</p>
             <p><a href="/">Overview of all apps by Universe Lab</a></p>
         </div>
     </div>
